@@ -74,7 +74,9 @@ Aliases may accept arguments and may consist of multiple commands. In the alias 
 
 Then executing `Cfiles draw` would open new windows for editing `draw.h` and `draw.c`.
 
-**Warning:** Aliases do not guarantee sequential execution of each of the commands in the definition. If you tried to define an alias to perform `echo -n 'line count:'; >wc -l` for example, the `wc` command's output could be printed before the `echo` command's output.
+!!! warning
+
+    Aliases do not guarantee sequential execution of each of the commands in the definition. If you tried to define an alias to perform `echo -n 'line count:'; >wc -l` for example, the `wc` command's output could be printed before the `echo` command's output.
 
 ## style.js
 
