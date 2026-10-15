@@ -74,6 +74,11 @@ not_in_nav: |
 markdown_extensions:
   - admonition
   - pymdownx.details
+  - pymdownx.keys:
+      key_map:
+        left-button: Mouse Left Button
+        middle-button: Mouse Middle Button
+        right-button: Mouse Right Button
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true 
