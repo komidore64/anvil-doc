@@ -24,7 +24,6 @@ nav:
     - 'Install Anvil': how-to/install.md
     - 'Build Anvil': how-to/build.md
     - 'Solve Common Issues': how-to/common-issues.md
-    #- 'Use a Special Remote Environment*': how-to/dev-env.md
     - 'Jump to a Line Number': how-to/jump-to-specific-line.md
     - 'Enter a Password to an OS Program': how-to/enter-a-password.md
     - 'Ignore Case in Searches': how-to/case-insensitive-search.md
