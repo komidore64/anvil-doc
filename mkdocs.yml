@@ -57,7 +57,6 @@ nav:
     - 'Keymaps': reference/keymaps.md
     - 'Layers': reference/layers.md
   - 'Articles':
-#    - 'Overview': articles/index.md
     - 'Differences from Acme': articles/differences-from-acme.md
     - 'Why require ALT+right-click?': articles/why-alt-right-click.md
     - 'Why a REST API?': articles/why-rest.md
