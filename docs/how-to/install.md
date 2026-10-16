@@ -1,6 +1,6 @@
 # Installing Anvil
 
-Anvil is built as a statically-linked binary. It's sufficient to simply copy the binaries to an appropriate place. However, for Windows an installer is provided that installs Anvil and also adds convenient shortcuts to Windows Explorer for launching it.
+Anvil is built as a dynamically-linked binary. It's sufficient to simply copy the binaries to an appropriate place. However, for Windows an installer is provided that installs Anvil and also adds convenient shortcuts to Windows Explorer for launching it.
 
 Anvil is built using GIO, and for some operating systems GIO has extra dependencies that must be installed. See the [GIO Install page](https://gioui.org/doc/install) for the correct dependencies for your OS.
 
