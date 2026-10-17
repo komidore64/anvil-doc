@@ -14,7 +14,7 @@ For reference you can view the default keymap file used by Anvil by looking in t
 
 The directive lines are:
 
-### `keymap <name> [replace|update|fallthrough]...`
+### `keymap <name> [replace | update | fallthrough]...`
 
 This line declares the beginning of a keymap definition. The lines which follow it all belong to the keymap until the next keymap line or the end of file. Each keymap must have a name, and optionally has one or more space-separated flags. The allowed flags are described below.
 
@@ -32,7 +32,7 @@ keymap emacs update
 
 The `map` directive defines one keypress in the mapping. The `key` specification must be a name of one of the keys on the keyboard as defined by GIO, optionally preceeded by one or more modifier letters and a hyphen. The keynames for letters, digits, and punctuation are simply the letter in uppercase, the number or punctuation. The function keys (F1-F12) are named as expected. Other keys may use symbolic names from unicode; see the [reference](https://pkg.go.dev/gioui.org/io/key#Name) for the type Name in the GIO package for a list.
 
-Modifiers letters consist of 'S' for ++shift++, 'A' for ++alt++, 'C' for ++control++ and 'K' for ++command++. When Anvil loads a keymap from a file for each mapping containing the 'C' modifier Anvil makes a duplicate mapping with 'C' substituted with 'K', so it is sufficient to only define the mapping for ++control++.
+Modifiers letters consist of `S` for ++shift++, `A` for ++alt++, `C` for ++control++ and `K` for ++command++. When Anvil loads a keymap from a file for each mapping containing the `C` modifier Anvil makes a duplicate mapping with `C` substituted with `K`, so it is sufficient to only define the mapping for ++control++.
 
 Following the key specification is a semi-colon-separated list of action names. The action names may not contain spaces. Each action in the list is executed when the key is pressed.
 

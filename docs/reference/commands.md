@@ -29,7 +29,7 @@ An alias may contain placeholders of the form `$1` to `$9` which are replaced wi
 
 ## Ansi
 
-Usage: `Ansi [on|off]`
+Usage: `Ansi [on | off]`
 
 `Ansi` is used to control whether ANSI terminal color escape sequences cause coloring or not. With no argument or `on` specified it enables coloring. With the argument `off` it disables coloring.
 
@@ -136,7 +136,7 @@ Change to the next font defined in the styles.
 
 ## Fontsize
 
-Usage: `Fontsize <N|+N|-N>`
+Usage: `Fontsize <N | +N | -N>`
 
 Change the font size of the active font. This command accepts one argument. If the argument is a number, then the font size is set to that value in points. If it is `+N` or `-N` then the current font size is increased or decreased by N points respectively.
 
@@ -182,35 +182,22 @@ Usage: `Hostpass <password> <hostname> [<username>] [<port>]`
 
 `Id` prints the window ID to the `+Errors` window. Useful when using the API.
 
-## Keymap - TODO
+## Keymap
 
 Usage:
 
 ```
+Keymap show (def <name> | defs | stack)
 Keymap load <file>
-Keymap show def <name> | defs | stack
-Keymap push <name>
-Keymap pop
-Keymap win push <name>
-Keymap win pop
-Keymap win reset
+Keymap (push <name> | pop)
+Keymap win (push <name> | pop | reset)
 ```
 
-`Keymap` subcommands:
+When run with the `show` argument, this command shows keymap information. The argument `defs` shows all defined keymaps. The `def <name>` variant shows the definition of the keymap with name `name`. The argument `stack` shows the current keymap stack, with the top being shown last.
 
-- `load <file>`
-- `show (defs | stack | def <name>)`
-- `push <name>`
-- `pop`
-- `win push <name>`
-- `win pop`
-- `win reset`
+When run with the `load` argument, load a keymap file which contains one or more keymap definitions. When run with the `push` argument, push a keymap onto the global keymap stack. When run with the `pop` argument, pop off the top keymap in the stack. The bottommost keymap is never popped.
 
-When run with the 'show' argument, this command shows keymap information. The argument 'defs' shows all defined keymaps. The 'def <name>' shows the definition of the keymap with name <name>. The argument 'stack' shows the current keymap stack, with the top being shown last.
-
-When run with the 'add' argument, load a keymap file which contains one or more keymap definitions. When run with the 'push' argument, push a keymap onto the global keymap stack. When run with the 'pop' argument, pop off the top keymap in the stack. The bottommost keymap is never popped.
-
-If the first argument is win, then the keymap for the local window only is modified. If 'win push' or 'win pop' is executed and the window is using the global keymap stack, then the global keymap stack is copied to the window and a keymap pushed to or popped from that window stack respectively. 'win reset' resets the window's keymap stack to be the global keymap stack again.
+If the first argument is `win`, then the keymap for the local window only is modified. If `win push` or `win pop` is executed and the window is using the global keymap stack, then the global keymap stack is copied to the window and a keymap pushed to or popped from that window stack respectively. `win reset` resets the window's keymap stack to be the global keymap stack again.
 
 
 
@@ -290,9 +277,11 @@ Usage: `On <path> <command>...`
 
 `On` takes two or more arguments. The first is a host and directory (in the format `host:directory`) and the remaining arguments are the command and arguments to run.
 
-## Only - TODO
+## Only
 
-`Only` takes effect when executed in a window or its tag. With no argument, close the other windows in this column leaving only this window. With the argument 'above', close windows below this window. With the argument 'below', close windows above this window.
+Usage: `Only [above | below]`
+
+`Only` takes effect when executed in a window or its tag. With no argument, close the other windows in this column leaving only this window. With the argument `above`, close windows below this window. With the argument `below`, close windows above this window.
 
 ## Paste
 
@@ -300,7 +289,7 @@ Usage: `On <path> <command>...`
 
 ## Pic
 
-Usage: `Pic <filename> [fit|<N>%]`
+Usage: `Pic <filename> [fit | <N>%]`
 
 `Pic` sets the background picture for the window body. The first argument should be the name of a .png, .gif or .jpeg image. The second argument, if specified, specifies how to scale the image. If the second argument is the word `fit`, without quotes, the image is scaled to the size of the window width. If the second argument is a number followed by the % character (such as `50%`) the image is scaled by that percentage.
 
@@ -382,7 +371,7 @@ When executed with no arguments, set the Shell String for the current window to 
 
 ## Syn
 
-Usage: `Syn [list|off|<language>]`
+Usage: `Syn [list | off | <language>]`
 
 `Syn` is used to control syntax highlighting for the current window. With the argument `off` it disables syntax highlighting, and with the argument `list` it lists supported languages. With any other argument it enables syntax highlighting and highlights the body using the language named by the argument. With no argument it attempts to analyze the text to autodetect the language.
 
@@ -407,7 +396,7 @@ Tab '\t'
 
 ## Tint
 
-Usage: `Tint [list|<color>]`
+Usage: `Tint [list | <color>]`
 
 `Tint` is used to color selections of text. When executed with the argument `list` it shows the pre-defined tint colors. When executed with one argument that is not `list`, it changes the text in all current selections to that color. The argument must be a hex color code in the form `#rrggbb` or a color name. When executed with no argument and selections present, it removes the coloring for text that overlap the selections. When run with no arguments and no selections it clears all tinting.
 
