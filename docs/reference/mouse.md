@@ -50,7 +50,7 @@
 | ++middle-button++ | ++alt++ + Single click | Clear the `+Errors` window then execute the word or selection. |
 | ++middle-button++ | Select and release | Execute the selected command. |
 | ++middle-button++ | ++alt++ + Select and release | Clear the `+Errors` window then execute the selected command. |
-| ++scroll-wheel++ | ++control++ + Scroll | Increase or reduce font size. |
+| ++scroll-wheel++ | ++control++ + Scroll | Change the active layer by moving up and down the layer stack. |
 
 [^1]: A delimiting character refers to an opening or closing bracket, or an opening or closing quote character. Explicitly, one of `{`, `[`, `(`, `<` or its matching closer, or one of `"`, `` ` ``, or `◊`.
 
